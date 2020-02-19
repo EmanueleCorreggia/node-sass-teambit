@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #58402c;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #58402c;
+}
+
+.blue-btn {
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.5s;
+  font-weight: 500;
+  padding: 8px 18px;
+  background-color: #30488f;
+  color: white;
+}
+
+.blue-btn:hover {
+  background-color: #233569;
+}
+
+.blue-btn img {
+  height: 18px;
+  vertical-align: bottom;
+  margin-right: 5px;
+}
+
+.white-btn {
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.5s;
+  font-weight: 500;
+  background-color: white;
+  color: #5252CC;
+  border: 1px solid #5252CC;
+  padding: 8px 12px;
+}
+
+.white-btn:hover {
+  background-color: #233569;
+  color: white;
+}
+
+.white-btn:hover img {
+  -webkit-filter: brightness(10000%) contrast(1000%);
+          filter: brightness(10000%) contrast(1000%);
+}
+
+.white-btn img {
+  height: 16px;
+  margin-right: 6px;
+  vertical-align: text-top;
+  transition: 0.2s;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#navbar {
+  top: 0;
+  background-color: white;
+  width: 100%;
+  height: 75px;
+  z-index: 2;
+  padding: 0 25px;
+  position: fixed;
+}
+
+#navbar .nav_container {
+  width: 1150px;
+  max-width: 100%;
+  height: 75px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid darkgrey;
+}
+
+#navbar .nav_container .logo_container {
+  flex-grow: 2;
+}
+
+#navbar .nav_container ul li {
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  margin-left: 35px;
+  position: relative;
+  line-height: 30px;
+}
+
+#navbar .nav_container ul li:hover,
+#navbar .nav_container ul li:hover i.fas,
+#navbar .nav_container ul li:hover > a {
+  color: #5252CC;
+}
+
+#navbar .nav_container ul li ul.dropdown {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 27px;
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+  padding-right: 20px;
+  background-color: white;
+}
+
+#navbar .nav_container ul li ul.dropdown li {
+  display: block;
+  margin: 18px 12px;
+  line-height: normal;
+}
+
+#navbar .nav_container > i.fas {
+  display: none;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+#navbar ul.bars_dropdown {
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  background-color: white;
+  position: fixed;
+  left: 0;
+  top: 60px;
+  padding: 10px 25px;
+  display: none;
+}
+
+#navbar ul.bars_dropdown li {
+  margin: 15px 0;
+}
+
+#navbar ul.bars_dropdown li a {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#navbar ul.bars_dropdown li:hover a {
+  color: #5252CC;
+}
+
+#navbar ul.bars_dropdown #btn_long {
+  margin-top: 25px;
+}
+
+#navbar ul.bars_dropdown #btn_long span.white-btn {
+  padding-left: calc(50% - 36px);
+  padding-right: calc(50% - 36px);
+}
+
+main {
+  padding: 0 25px;
+}
+
+.jumbotron {
+  margin-top: 180px;
+  width: 1150px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.jumbotron .jumbo_text {
+  margin-bottom: 30px;
+  width: 570px;
+}
+
+.jumbotron .jumbo_text h1 {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 70px;
+  margin-bottom: 35px;
+}
+
+.jumbotron .jumbo_text h2 {
+  margin-bottom: 40px;
+  font-weight: 100;
+}
+
+.jumbotron .jumbo_text a {
+  font-size: 14px;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.jumbotron .jumbo_text p {
+  font-size: 13px;
+  color: lightgrey;
+  margin: 0 15px;
+  display: inline-block;
+}
+
+.jumbotron .jumbo_img {
+  width: 570px;
+  height: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .jumbotron .jumbo_text {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #navbar {
+    height: 60px;
+  }
+
+  #navbar .nav_container {
+    height: 60px;
+  }
+
+  #navbar .nav_container ul.sections {
+    display: none;
+  }
+
+  #navbar .nav_container i.fas {
+    display: block;
+  }
+
+  #navbar ul.bars_dropdown {
+    display: block;
+  }
+}
+

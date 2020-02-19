@@ -1,0 +1,69 @@
+@import "partials/_variables.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $textcolor;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $textcolor;
+}
+
+@mixin button {
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: .5s;
+  font-weight: 500;
+}
+
+.blue-btn {
+  @include button;
+  padding: 8px 18px;
+  background-color: $buttonbackground;
+  color: white;
+  &:hover {
+    background-color: $buttonbackgroundhover;
+  }
+  & img {
+    height: 18px;
+    vertical-align: bottom;
+    margin-right: 5px;
+  }
+}
+
+.white-btn {
+  @include button;
+  background-color: white;
+  color: $textcolorhover;
+  border: 1px solid $textcolorhover;
+  padding: 8px 12px;
+  &:hover{
+    background-color: $buttonbackgroundhover;
+    color: white;
+  }
+  &:hover img{
+    filter: brightness(10000%) contrast(1000%);
+  }
+  img {
+    height: 16px;
+    margin-right: 6px;
+    vertical-align: text-top;
+    transition: .2s;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
